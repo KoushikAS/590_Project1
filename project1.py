@@ -54,19 +54,22 @@ in a sorted manner.
 Best Case: Ω(n log(n))
 Average Case: θ(n log(n))
 Worst Case: O(n log(n))
-Space Cmplexity: O(n)
+Space Complexity: O(n)
 """
 
 
 def MergeSort(listToSort):
+    # Base condition: to return the obtained list if the size is 1 or 0
     if len(listToSort) <= 1:
         return listToSort
 
+    # Dividing the main list into two sub lists and recursively calling sorting the sub lists.
     mid = len(listToSort) // 2
     list1 = MergeSort(listToSort[:mid])
     list2 = MergeSort(listToSort[mid:])
     index = 0
 
+    # Combining two sorted sub lists into the main list.
     while (len(list1) != 0) and (len(list2) != 0):
         if list1[0] < list2[0]:
             listToSort[index] = list1.pop(0)
@@ -74,10 +77,12 @@ def MergeSort(listToSort):
             listToSort[index] = list2.pop(0)
         index += 1
 
+    # Adding the left over elements from list1 to the main list.
     while len(list1) != 0:
         listToSort[index] = list1.pop(0)
         index += 1
 
+    # Adding the left over elements from list 2 to the main list.
     while len(list2) != 0:
         listToSort[index] = list2.pop(0)
         index += 1
