@@ -10,6 +10,10 @@ Date: 9-Nov-2022
 
 """
 SelectionSort
+Best Case: Ω(n^2)
+Average Case: θ(n^2)
+Worst Case: O(n^2)
+Space Complexity: O(1)
 """
 def SelectionSort(listToSort):
     size = range(0, len(listToSort) - 1)
@@ -27,6 +31,10 @@ def SelectionSort(listToSort):
 
 """
 InsertionSort
+Best Case: Ω(n)
+Average Case: θ(n^2)
+Worst Case: O(n^2)
+Space Complexity: O(1)
 """
 def InsertionSort(listToSort):
     size = range(1, len(listToSort))
@@ -53,6 +61,10 @@ def MergeSort(listToSort):
 
 """
 QuickSort
+Best Case: Ω(n*log(n))
+Average Case: θ(n*log(n))
+Worst Case: O(n^2)
+Space Complexity: O(n*log(n))
 
 Sort a list with the call QuickSort(listToSort),
 or additionally specify i and j.
