@@ -58,10 +58,27 @@ Sort a list with the call QuickSort(listToSort),
 or additionally specify i and j.
 """
 def QuickSort(listToSort, i=0, j=None):
+    listToSort = listToSort[i: j]
+
     # Set default value for j if None.
-    if j == None:
+    if j == None or j > len(listToSort):
         j = len(listToSort)
-    return listToSort
+
+    if j <= 1:
+        return listToSort
+    else:
+        pivot = listToSort.pop()
+
+    higher_list = []
+    lower_list = []
+
+    for index in range(i, j - 1):
+        if listToSort[index] > pivot:
+            higher_list.append(listToSort[index])
+        else:
+            lower_list.append(listToSort[index])
+
+    return QuickSort(lower_list, 0, len(lower_list)) + [pivot] + QuickSort(higher_list, 0, len(higher_list))
 
 """
 Importing the testing code after function defs to ensure same references.
