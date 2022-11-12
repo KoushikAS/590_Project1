@@ -12,31 +12,12 @@ Date: 9-Nov-2022
 SelectionSort
 """
 def SelectionSort(listToSort):
-    size = range(0, len(listToSort) - 1)
-
-    for i in size:
-        min_index = i
-        for j in range(i + 1, len(listToSort)):
-            if listToSort[min_index] > listToSort[j]:
-                min_index = j
-        if min_index != i:
-            listToSort[min_index], listToSort[i] = listToSort[i], listToSort[min_index]
-
-    
     return listToSort
 
 """
 InsertionSort
 """
 def InsertionSort(listToSort):
-    size = range(1, len(listToSort))
-
-    for i in size:
-        curr = listToSort[i]
-        while i > 0 and curr < listToSort[i - 1]:
-            listToSort[i], listToSort[i - 1] = listToSort[i - 1], listToSort[i]
-            i = i - 1
-
     return listToSort
 
 """
