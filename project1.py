@@ -70,12 +70,16 @@ Space Complexity: O(1)
 def BubbleSort(listToSort):
     n = len(listToSort)
     for i in range(n - 1):
+        swapped_flag = False
         for j in range(n - i - 1):
             # Swapping the elements if the element at j is greater than j+1
             if listToSort[j] > listToSort[j + 1]:
                 tmp = listToSort[j]
                 listToSort[j] = listToSort[j + 1]
                 listToSort[j + 1] = tmp
+                swapped_flag = True
+        if not swapped_flag:
+            break
 
     return listToSort
 
@@ -180,13 +184,13 @@ from project1tests import *
 Main function.
 """
 if __name__ == "__main__":
-    # print('Testing Selection Sort')
-    # print()
-    # testingSuite(SelectionSort)
-    # print()
-    # print('Testing Insertion Sort')
-    # print()
-    # testingSuite(InsertionSort)
+    print('Testing Selection Sort')
+    print()
+    testingSuite(SelectionSort)
+    print()
+    print('Testing Insertion Sort')
+    print()
+    testingSuite(InsertionSort)
     print()
     print('Testing Bubble Sort')
     print()
@@ -196,10 +200,10 @@ if __name__ == "__main__":
     print()
     testingSuite(MergeSort)
     print()
-    # print('Testing Quick Sort')
-    # print()
-    # testingSuite(QuickSort)
-    # print()
+    print('Testing Quick Sort')
+    print()
+    testingSuite(QuickSort)
+    print()
     print('UNSORTED measureTime')
     print()
     measureTime()
