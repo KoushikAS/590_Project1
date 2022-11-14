@@ -36,7 +36,8 @@ def SelectionSort(listToSort):
 
 
 """
-InsertionSort: is a sorting algorithm which sorts a subsection of a list every cycle.
+InsertionSort: is a sorting algorithm which sorts a subsection of a list every cycle by pushing smaller elements into
+                the corresponding position in the sorted sublist. 
 Best Case: Ω(n)
 Average Case: θ(n^2)
 Worst Case: O(n^2)
