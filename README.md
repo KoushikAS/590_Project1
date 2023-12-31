@@ -1,5 +1,5 @@
 # Project #1: Sorting Algorithms 
-ECE 650 – Spring 2023
+ECE 590 – Fall 2023
 
 ## Project Overview
 This project focuses on the implementation and analysis of various sorting algorithms. The algorithms implemented include Selection Sort, Insertion Sort, Bubble Sort, Merge Sort, and Quick Sort. This repository serves as a showcase of the understanding and application of these fundamental algorithms in Python.
@@ -35,7 +35,6 @@ python project1.py
 
 ## Collaboration
 This project was completed as part of a collaborative effort with Shravan MS, adhering to the principles of pair programming.
-
 
 ## License
 This project is an academic assignment and is subject to university guidelines on academic integrity and software use.
